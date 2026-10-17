@@ -1,9 +1,9 @@
 {
   "name": "dsh-emotion",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "main": "lib/index.js",
-  "description": "DeepSeek Harness 情绪模块插件：感知/状态机/LLM复核/安全守卫/持久化",
+  "description": "DeepSeek Harness 情绪模块插件：感知/状态机/LLM复核/安全守卫/持久化/对话框情绪chip开关",
   "license": "MIT",
   "author": "xiaoyeziyinxing",
   "repository": {
@@ -20,7 +20,21 @@
     "lib",
     "cordis.patch.yml"
   ],
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./client/service": "./lib/client.js",
+    "./client/api": "./lib/client.js"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "inject": [],
+      "platform": "web",
+      "immediately": true
+    },
+    "manifestVersion": 1
+  },
   "dependencies": {
     "zod": "4.4.3"
   }

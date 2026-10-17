@@ -1,9 +1,15 @@
 {
   "name": "dsh-emotion",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "main": "lib/index.js",
-  "description": "DeepSeek Harness 情绪模块插件：感知/状态机/LLM复核/安全守卫/持久化/对话框情绪chip开关",
+  "types": "lib/index.d.ts",
+  "description": "DeepSeek Harness 情绪模块插件：感知/状态机/LLM复核/安全守卫/持久化/expressionStyle三档/对话框情绪chip开关（TypeScript + vitest）",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
   "license": "MIT",
   "author": "xiaoyeziyinxing",
   "repository": {
@@ -36,6 +42,12 @@
     "manifestVersion": 1
   },
   "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.5",
     "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
   }
 }

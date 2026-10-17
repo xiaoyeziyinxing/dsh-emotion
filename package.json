@@ -3,7 +3,23 @@
   "version": "0.2.0",
   "type": "module",
   "main": "lib/index.js",
-  "description": "DSH 情绪模块插件 P1-a：+storageDomain 持久化 + get_mood/express_emotion 工具",
+  "description": "DeepSeek Harness 情绪模块插件：感知/状态机/LLM复核/安全守卫/持久化",
+  "license": "MIT",
+  "author": "xiaoyeziyinxing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaoyeziyinxing/dsh-emotion.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "emotion",
+    "agent"
+  ],
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
   "dependencies": {
     "zod": "4.4.3"

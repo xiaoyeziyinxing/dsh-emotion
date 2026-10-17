@@ -1,0 +1,5 @@
+- insert:
+    - id: emotion
+      name: dsh-emotion
+      config:
+        decayPerHour: 0.15

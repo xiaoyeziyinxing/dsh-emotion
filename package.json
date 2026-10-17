@@ -1,0 +1,11 @@
+{
+  "name": "dsh-emotion",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "description": "DSH 情绪模块插件 P1-a：+storageDomain 持久化 + get_mood/express_emotion 工具",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}
